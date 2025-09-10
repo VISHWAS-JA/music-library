@@ -1,0 +1,25 @@
+server:
+  port: 9083
+
+spring:
+  application:
+    name: notification-service
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mellomusicapp@gmail.com
+    password: Mello@123
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9761/eureka/
+    register-with-eureka: true
+    fetch-registry: true

@@ -1,0 +1,23 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/your-github-username/music-library-config
+          # If your repo is private, add username/password or SSH config here
+          # username: your-username
+          # password: your-password
+          # search-paths: config
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
